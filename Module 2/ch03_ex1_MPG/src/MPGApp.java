@@ -1,4 +1,5 @@
 import java.util.Scanner;
+import java.text.NumberFormat;
 
 public class MPGApp {
 
@@ -19,10 +20,21 @@ public class MPGApp {
             input = sc.nextLine();
             double gallons = Double.parseDouble(input);
 
-            //double mpg1 = miles/gallons;
-            //System.out.println(mpg1);
-            double mpg = ( double ) Math.round( miles/gallons * 100) / 100 ;
-            System.out.printf("Miles per gallon is " + mpg + ".");
+            //Untouched formatted mpg value
+            double mpg = miles/gallons;
+            //System.out.println(mpg);
+            System.out.printf("Miles per gallon is " + mpg + ".\n");
+
+            //Math.round mpg formatted value
+            double mpgRounded = ( double ) Math.round( miles/gallons * 100) / 100 ;
+            System.out.printf("Miles per gallon is " + mpgRounded + ".\n");
+
+            //NumberFormat mpg value
+            NumberFormat num =  NumberFormat.getNumberInstance();
+            num.setMaximumFractionDigits(2);
+            String mpgString = num.format(mpg);
+            System.out.printf("Miles per gallon is " + mpgString + ".");
+
             System.out.println(); 
             
             System.out.print("Calculate another MPG? (y/n): ");
