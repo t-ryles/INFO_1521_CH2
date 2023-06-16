@@ -20,14 +20,15 @@ public class MPGApp {
             input = sc.nextLine();
             double gallons = Double.parseDouble(input);
 
-            //Untouched formatted mpg value
             double mpg = miles/gallons;
+
+            //Untouched formatted mpg value
             //System.out.println(mpg);
-            System.out.printf("Miles per gallon is " + mpg + ".\n");
+            //System.out.printf("Miles per gallon is " + mpg + ".\n");
 
             //Math.round mpg formatted value
-            double mpgRounded = ( double ) Math.round( miles/gallons * 100) / 100 ;
-            System.out.printf("Miles per gallon is " + mpgRounded + ".\n");
+            //double mpgRounded = ( double ) Math.round( miles/gallons * 100) / 100 ;
+            //System.out.printf("Miles per gallon is " + mpgRounded + ".\n");
 
             //NumberFormat mpg value
             NumberFormat num =  NumberFormat.getNumberInstance();
