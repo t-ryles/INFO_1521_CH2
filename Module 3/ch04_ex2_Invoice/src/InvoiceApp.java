@@ -18,34 +18,38 @@ public class InvoiceApp {
             System.out.print("Enter subtotal:   ");
             subtotal = Double.parseDouble(sc.nextLine());
 
-            // get the discount percent
-//            discountPercent = switch (customerType) {
-//                case "r", "R" -> {
-//                    if /*(subtotal >= 250)*/ (subtotal >= 500) {
-//                        //yield .2;
-//                        yield .3;
-//                    } else if /*(subtotal >= 100)*/ (subtotal > 250 && subtotal < 500) {
-//                        //yield .1;
-//                        yield .25;
-//                    } else {
-//                        yield 0.0;
-//                    }
-//                }
-//
-//                case "t", "T" -> {
-//                    if (subtotal >= 500) {
-//                        yield .4;
-//                    } else if (subtotal < 500) {
-//                        yield .5;
-//                    } else {
-//                        yield .0;
-//                    }
-//                }
-//
-//                case "c", "C" -> .2;
-//                default -> .2;
+            /*
+             get the discount percent
+                        discountPercent = switch (customerType) {
+                            case "r", "R" -> {
+                                if /*(subtotal >= 250)* / (subtotal >= 500) {
+                                    //yield .2;
+                                    yield .3;
+                                } else if /*(subtotal >= 100)* / (subtotal > 250 && subtotal < 500) {
+                                    //yield .1;
+                                    yield .25;
+                                } else {
+                                    yield 0.0;
+                                }
+                            }
 
-                //In scope
+                            case "t", "T" -> {
+                                if (subtotal >= 500) {
+                                    yield .4;
+                                } else if (subtotal < 500) {
+                                    yield .5;
+                                } else {
+                                    yield .0;
+                                }
+                            }
+
+                            case "c", "C" -> .2;
+                            default -> .2;
+             */
+            //Scope marker
+            //Get the discount percent
+
+
             if (customerType.equals("r") || customerType.equals("R")){
                 if (subtotal >= 500) {
                     discountPercent = .3;
