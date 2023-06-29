@@ -58,7 +58,7 @@ public class FutureValueApp {
 
                     double futureValue = 0;
                     for (int i = 1; i < months; i++) {
-                        futureValue = (futureValue + monthIntRate) * (1 + monthIntRate);
+                        futureValue = (futureValue + monthlyInvestment) * (1 + monthIntRate);
                     }
                     System.out.printf("%12s", currency.format(futureValue));
                 }
