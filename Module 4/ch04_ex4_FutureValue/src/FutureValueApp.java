@@ -63,14 +63,13 @@ public class FutureValueApp {
                     System.out.printf("%12s", currency.format(futureValue));
                 }
             }
-
             System.out.println();
 
             // see if the user wants to continue
             System.out.print("Continue? (y/n): ");
             choice = sc.nextLine();
             System.out.println();
-        } // End of while loop
+        }
         System.out.println("Bye!");
     }
 }
