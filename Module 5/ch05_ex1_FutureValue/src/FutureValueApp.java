@@ -23,17 +23,20 @@ public class FutureValueApp {
             double futureValue = calculateFutureValue(
                     monthlyInvestment, interestRate, years);
 
-            // get the currency and percent formatters
-            NumberFormat c = NumberFormat.getCurrencyInstance();
-            NumberFormat p = NumberFormat.getPercentInstance();
-            p.setMinimumFractionDigits(1);
+//            // get the currency and percent formatters
+//            NumberFormat c = NumberFormat.getCurrencyInstance();
+//            NumberFormat p = NumberFormat.getPercentInstance();
+//            p.setMinimumFractionDigits(1);
+//
+//            // print the results
+//            System.out.println("FORMATTED RESULTS\n"
+//              + "Monthly investment:   " + c.format(monthlyInvestment) + "\n"
+//              + "Yearly interest rate: " + p.format(interestRate / 100) + "\n"
+//              + "Number of years:      " + years + "\n"
+//              + "Future value:         " + c.format(futureValue) + "\n");
 
             // print the results
-            System.out.println("FORMATTED RESULTS\n" 
-              + "Monthly investment:   " + c.format(monthlyInvestment) + "\n"
-              + "Yearly interest rate: " + p.format(interestRate / 100) + "\n"
-              + "Number of years:      " + years + "\n"
-              + "Future value:         " + c.format(futureValue) + "\n");
+            System.out.println(printFormattedResult(monthlyInvestment, interestRate, years, futureValue));
 
             // see if the user wants to continue
             System.out.print("Continue? (y/n): ");
@@ -105,8 +108,22 @@ public class FutureValueApp {
         return futureValue;
     }
 
-    public static String printFormattedResult(double monthlyInvestment,
-                                              double interestRate, int years, double futureValue){
+    public static String printFormattedResult(
+            double monthlyInvestment, double interestRate, int years, double futureValue){
 
+        // get the currency and percent formatters
+        NumberFormat c = NumberFormat.getCurrencyInstance();
+        NumberFormat p = NumberFormat.getPercentInstance();
+        p.setMinimumFractionDigits(1);
+
+        // print the results
+
+        return ("FORMATTED RESULTS\n"
+                + "Monthly investment:   " + c.format(monthlyInvestment) + "\n"
+                + "Yearly interest rate: " + p.format(interestRate / 100) + "\n"
+                + "Number of years:      " + years + "\n"
+                + "Future value:         " + c.format(futureValue) + "\n");
     }
+
+
 }
