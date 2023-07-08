@@ -39,9 +39,11 @@ public class FutureValueApp {
             System.out.println(printFormattedResult(monthlyInvestment, interestRate, years, futureValue));
 
             // see if the user wants to continue
-            System.out.print("Continue? (y/n): ");
-            choice = sc.nextLine();
-            System.out.println();
+//            System.out.print("Continue? (y/n): ");
+//            choice = sc.nextLine();
+//            System.out.println();
+
+            choice = askToContinue(sc);
         }
     }
     
@@ -125,5 +127,11 @@ public class FutureValueApp {
                 + "Future value:         " + c.format(futureValue) + "\n");
     }
 
-
+    // see if the user wants to continue
+    public static String askToContinue(Scanner sc){
+        System.out.print("Continue? (y/n): ");
+        String choice = sc.nextLine();
+        System.out.println();
+        return choice;
+    }
 }
