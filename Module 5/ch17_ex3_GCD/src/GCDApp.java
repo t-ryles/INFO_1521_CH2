@@ -24,12 +24,20 @@ public class GCDApp {
     // iterative
     public static int iterGCD(int a, int b) {
         System.out.println("Iterative solution here...");
-        return 0;
+
+        while(b != 0) {
+            int val = b;
+            b = a % b;
+            a = val;
+         }
+        return a;
     }
 
     // recursive
     public static int recGCD(int a, int b) {
         System.out.println("Recursive solution here...");
+
+
         return 0;
     }
 }
