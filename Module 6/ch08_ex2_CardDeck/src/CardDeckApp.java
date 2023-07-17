@@ -1,3 +1,5 @@
+import java.util.ArrayList;
+
 public class CardDeckApp {
 
     public static void main(String[] args) {
@@ -18,6 +20,7 @@ public class CardDeckApp {
     private static String[] getDeck() {
         String[] deck = new String[52];
         // add code that creates deck here
+        String[] suites = {"Diamonds", "Clubs", "Hearts", "Spades"};
         return deck;
     }
 
