@@ -9,7 +9,7 @@ public class CardDeckApp {
 
         System.out.println("SHUFFLED DECK");
         shuffleDeck(deck);
-        displayCards(deck);
+        //displayCards(deck);
 
         int count = 2;
         System.out.println("HAND OF " + count + " CARDS");
@@ -27,7 +27,7 @@ public class CardDeckApp {
 
         for (String suite : suites) {
             for (String rank : ranks) {
-                deck[index] += rank + " of " + suite;
+                deck[index] = rank + " of " + suite;
                 index++;
             }
         }
@@ -37,7 +37,7 @@ public class CardDeckApp {
     private static void displayCards(String[] cards) {
         // add code that displays cards here
         for(String card : cards) {
-            System.out.println(card + " |");
+            System.out.print(card + " |");
         }
     }
 
@@ -45,6 +45,7 @@ public class CardDeckApp {
         int randomIndex = (int) (Math.random() * deck.length-1);
         
         // add code that shuffles the deck here
+
     }
 
     private static String[] dealCards(String[] deck, int count) {
