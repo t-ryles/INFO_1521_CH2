@@ -39,6 +39,7 @@ public class CardDeckApp {
         for(String card : cards) {
             System.out.print(card + " |");
         }
+        System.out.println();
     }
 
     private static void shuffleDeck(String[] deck) {
