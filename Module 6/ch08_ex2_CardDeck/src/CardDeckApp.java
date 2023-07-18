@@ -21,11 +21,24 @@ public class CardDeckApp {
         String[] deck = new String[52];
         // add code that creates deck here
         String[] suites = {"Diamonds", "Clubs", "Hearts", "Spades"};
+        String[] ranks = {"2","3","4","5","6","7","8","9","10","J","Q","K","A"};
+
+        int index = 0;
+
+        for (String suite : suites) {
+            for (String rank : ranks) {
+                deck[index] += rank + " of " + suite;
+                index++;
+            }
+        }
         return deck;
     }
 
     private static void displayCards(String[] cards) {
         // add code that displays cards here
+        for(String card : cards) {
+            System.out.println(card + " |");
+        }
     }
 
     private static void shuffleDeck(String[] deck) {
