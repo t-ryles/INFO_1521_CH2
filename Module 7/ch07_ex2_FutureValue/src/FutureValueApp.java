@@ -98,7 +98,7 @@ public class FutureValueApp {
         }
 
     }
-
+    // Financial Calculations class
     static class FinancialCalculations {
         public static double calculateFutureValue(double monthlyInvestment,
                                                   double interestRate, int years) {
