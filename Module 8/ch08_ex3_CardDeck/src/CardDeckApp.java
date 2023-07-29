@@ -12,9 +12,21 @@ public class CardDeckApp {
         displayCards(deck);
 
         int count = 2;
-        System.out.println("HAND OF " + count + " CARDS");
-        ArrayList<String> hand = dealCards(deck, count);
-        displayCards(hand);
+        int capacity = 4;
+        ArrayList<ArrayList<String>> hands = new ArrayList<>(capacity);
+
+        System.out.println("FOUR HANDS OF " + count + " CARDS");
+
+        for (int i = 0; i < capacity; i++){
+
+            ArrayList<String> hand = dealCards(deck, count);
+            hands.add(hand);
+            displayCards(hand);
+            shuffleDeck(deck);
+        }
+
+        int cardLeft = deck.size() - (hands.size()*2);
+        System.out.println("CARDS LEFT IN DECK: " + cardLeft);
     }
 
     private static ArrayList<String> getDeck() {
