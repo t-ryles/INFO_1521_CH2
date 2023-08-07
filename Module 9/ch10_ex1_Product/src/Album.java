@@ -11,6 +11,6 @@ public class Album extends Product {
 
     @Override
     public String toString() {
-        return super.toString() + " by " + artist;
+        return super.toString() + " by " + "(" + artist + ")";
     }
 }
